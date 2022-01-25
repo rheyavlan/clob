@@ -5,6 +5,7 @@ export const getOrderBook = () => {
     method: 'GET',
     url: '/api',
     success: (orderStr) => {
+      console.log("orderStr in jQuery", orderStr);
       return orderStr;
     },
     error: (err) => {

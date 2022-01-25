@@ -77,3 +77,52 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.maxHeap {
+  padding-top: 1em;
+  color: #e3ebec;
+  text-align: center;
+}
+
+.trade {
+  padding-top: 1em;
+  color: #e3ebec;
+  text-align: center;
+}
+
+.minHeap {
+  padding-top: 1em;
+  color: #e3ebec;
+  text-align: center;
+}
+
+.container .box { 
+  width:90%; 
+  margin:50px; 
+  display:table; 
+} 
+.container .box .box-row { 
+  display:table-row; 
+} 
+.container .box .box-cell { 
+  display:table-cell; 
+  width:33%; 
+  padding:10px; 
+} 
+.container .box .box-cell.box1 { 
+  background: #b10e0e4f; 
+  color:white; 
+  text-align:justify; 
+} 
+.container .box .box-cell.box2 { 
+  background:#08c51836; 
+  text-align:justify 
+} 
+.container .box .box-cell.box3 { 
+  background: #054c6159; 
+  text-align:justify; 
+}
+
+.oneline {
+  display: 'inline-block',
+}

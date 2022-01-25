@@ -1,1 +1,6 @@
-{"type":"Sell","price":100,"quantity":300,"user":"trader12"}
+[{"type":"Sell","price":550,"quantity":100,"user":"trader1","ticker":"TW","status":"open","filedQuantity":0},
+{"type":"Buy","price":540,"quantity":100,"user":"trader2","ticker":"TW","status":"open","filedQuantity":0}]
+
+
+
+

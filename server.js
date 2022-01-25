@@ -7,10 +7,12 @@ const { Transform } = require('stream');
 const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({ extended: false })  
 
+const processOrder = require("./processOrder.js");
 
 app.get('/api', (req, res) => {
   //const stream = fs.createReadStream('./data/TW/order_1.txt');
   const stream = fs.createReadStream('./data/TW/order_1.txt');
+  //const stream = fs.createReadStream('./data/TW/order_form.json');
 
   const splitLines = new Transform({
     readableObjectMode: true,
@@ -26,14 +28,25 @@ app.get('/api', (req, res) => {
     transform(orders, encoding, cb) {
       let parsed = orders.map((order) => {
         console.log("order : ", order);
+
         let t = order.split('\t');
+
         t[1] = parseInt(t[1]);
         t[2] = parseInt(t[2]);
-        return t;
+        t[6] = parseInt(t[6]);
+
+        let clob = processOrder.processOrder(t);
+        //let clob = processOrder.processingOrder(t);
+        console.log("threeList.bidItems : ",clob.bids);
+        console.log("threeList.offerItems : ",clob.offers);
+        console.log("threeList.Trade : ",clob.trade);
+        //return t;
+        return clob;
       });
-      console.log("parsed : ", parsed);
-      console.log("orders : ", orders);
+      //console.log("parsed : ", parsed);
+      //console.log("orders : ", orders);
       this.push(JSON.stringify(parsed) + '\n');
+      //this.push(JSON.stringify(processOrder.sendAllOrder) + '\n');
       cb();
     }
   });
