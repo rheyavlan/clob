@@ -1,0 +1,10 @@
+Sell	550	100	trader1	TW	Open	0
+Buy	540	100	trader2	TW	Open	0
+Sell	549	40	trader1	TW	Open	0
+Buy	550	100	trader2	TW	Open	0
+Sell	540	100	trader2	TW	Open	0
+Buy	550	100	trader1	TW	Open	0
+Sell	540	100	trader2	TW	Open	0
+Buy	549	40	trader1	TW	Open	0
+Sell	550	100	trader2	TW	Open	0
+Buy	540	100	trader2	TW	Open	0
