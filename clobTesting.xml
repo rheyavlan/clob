@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3237.856" tests="4" failures="2" skipped="1">
+  <testsuite name="Root Suite" timestamp="2022-01-26T17:29:05" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Task Business logic" timestamp="2022-01-26T17:29:05" tests="0" file="/Users/rheyavithlani/Desktop/clob/test/processOrderTest.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test function call processOrder which processes a given order" timestamp="2022-01-26T17:29:05" tests="2" file="/Users/rheyavithlani/Desktop/clob/test/processOrderTest.js" failures="2" time="3237.786">
+    <testcase name="Task Business logic Test function call processOrder which processes a given order Buy: It should return processed order" time="1261.646" classname="Buy: It should return processed order">
+      <failure message="Timeout of 1000000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/Users/rheyavithlani/Desktop/clob/test/processOrderTest.js)" type="Error"><![CDATA[Error: Timeout of 1000000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/Users/rheyavithlani/Desktop/clob/test/processOrderTest.js)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)]]></failure>
+    </testcase>
+    <testcase name="Task Business logic Test function call processOrder which processes a given order Sell: It should return processed order" time="1976.14" classname="Sell: It should return processed order">
+      <failure message="Timeout of 1000000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/Users/rheyavithlani/Desktop/clob/test/processOrderTest.js)" type="Error"><![CDATA[Error: Timeout of 1000000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/Users/rheyavithlani/Desktop/clob/test/processOrderTest.js)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Task APIs" timestamp="2022-01-26T18:23:03" tests="0" file="/Users/rheyavithlani/Desktop/clob/test/serverTest.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test GET route /api" timestamp="2022-01-26T18:23:03" tests="1" file="/Users/rheyavithlani/Desktop/clob/test/serverTest.js" failures="0" time="0.07">
+    <testcase name="Task APIs Test GET route /api It should return all orders" time="0.07" classname="It should return all orders">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test POST route" timestamp="2022-01-26T18:23:03" tests="1" file="/Users/rheyavithlani/Desktop/clob/test/serverTest.js" failures="0" time="0">
+  </testsuite>
+</testsuites>

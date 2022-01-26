@@ -14,17 +14,25 @@ npm install
 ```
 
 Command for server (Run this command if you only want to run the server): 
-> node server.js
+```
+node server.js
+```
 
 Command to run app : 
-> npm start
+```
+npm start
+```
 
 Command to test app : 
-> npm test
+```
+npm test
+```
 
-You will be redirected to http://localhost:3000/
+> You will be redirected to http://localhost:3000/
 
-Click on **Process Trade** to process all the trades present in order.txt file in the data directory 
+Click on **Process Trades** to process all the trades present in order.txt file in the data directory 
+
+> Process Trades
 
 You can choose to process any trade file but changing the file in server.js
 
