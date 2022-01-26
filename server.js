@@ -11,9 +11,9 @@ const processOrder = require("./processOrder.js");
 const preProcessOrder = require("./preProcessOrder.js");
 
 app.get('/api', (req, res) => {
-  const stream = fs.createReadStream('./data/TW/order_1.txt');
+  //const stream = fs.createReadStream('./data/TW/order_1.txt');
   //const stream = fs.createReadStream('./data/TW/order_2.txt');
-  //const stream = fs.createReadStream('./data/test2.txt');
+  const stream = fs.createReadStream('./data/test5.txt');
 
   const splitLines = new Transform({
     readableObjectMode: true,
