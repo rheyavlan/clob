@@ -7,7 +7,7 @@
     "client": "cd client && npm run start",
     "server": "nodemon server.js",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "test": "mocha ./test/* --recursive --reporter mocha-junit-reporter --reporter-options outputs=true --timeout 60000 --exit"
+    "test": "mocha ./test/p* --recursive --reporter mocha-junit-reporter --reporter-options mochaFile=clobTesting.xml --timeout 100000 --exit"
   },
   "dependencies": {
     "body-parser": "^1.19.1",

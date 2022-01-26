@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="0.041" tests="2" failures="0" skipped="1">
-  <testsuite name="Root Suite" timestamp="2022-01-26T01:30:19" tests="0" failures="0" time="0">
+<testsuites name="Mocha Tests" time="60.008" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2022-01-26T14:33:11" tests="0" failures="0" time="0">
   </testsuite>
-  <testsuite name="Task APIs" timestamp="2022-01-26T01:30:19" tests="0" file="/Users/rheyavithlani/Desktop/clob/test/serverTest.js" failures="0" time="0">
+  <testsuite name="Task Business logic" timestamp="2022-01-26T14:33:11" tests="0" file="/Users/rheyavithlani/Desktop/clob/test/processOrderTest.js" failures="0" time="0">
   </testsuite>
-  <testsuite name="Test GET route /api" timestamp="2022-01-26T01:30:19" tests="1" file="/Users/rheyavithlani/Desktop/clob/test/serverTest.js" failures="0" time="0.041">
-    <testcase name="Task APIs Test GET route /api It should return all orders" time="0.041" classname="It should return all orders">
+  <testsuite name="Test function call processOrder which processes a given order" timestamp="2022-01-26T14:33:11" tests="1" file="/Users/rheyavithlani/Desktop/clob/test/processOrderTest.js" failures="1" time="60.008">
+    <testcase name="Task Business logic Test function call processOrder which processes a given order It should return processed order" time="60.008" classname="It should return processed order">
+      <failure message="Timeout of 60000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/Users/rheyavithlani/Desktop/clob/test/processOrderTest.js)" type="Error"><![CDATA[Error: Timeout of 60000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/Users/rheyavithlani/Desktop/clob/test/processOrderTest.js)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)]]></failure>
     </testcase>
-  </testsuite>
-  <testsuite name="Test POST route" timestamp="2022-01-26T01:30:19" tests="1" file="/Users/rheyavithlani/Desktop/clob/test/serverTest.js" failures="0" time="0">
   </testsuite>
 </testsuites>

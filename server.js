@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({ extended: false })  
 
 const processOrder = require("./processOrder.js");
-const { isNullOrUndefined } = require('util');
+const preProcessOrder = require("./preProcessOrder.js");
 
 app.get('/api', (req, res) => {
   //const stream = fs.createReadStream('./data/TW/order_1.txt');
@@ -83,13 +83,10 @@ app.post('/postOrder', urlencodedParser,(req, res) => {
     fs.watch("./data/TW/order_2.txt", (eventType, filename) => {
       console.log("\nThe file", filename, "was modified!");
       console.log("The type of change was:", eventType);
-      let parsedData = data.toString().trim().replace("\n", "");
-      parsedData = parsedData.split('\t');
-      parsedData[1] = parseInt(parsedData[1]);
-      parsedData[2] = parseInt(parsedData[2]);
-      parsedData[6] = parseInt(parsedData[6]);
+      let parsedData = preProcessOrder.preProcessOrder(data);
+      console.log("parsedOrder in server.js", parsedData);
       processOrder.processOrder(parsedData);
-
+      
     });  
   })
 

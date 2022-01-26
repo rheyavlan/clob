@@ -17,7 +17,7 @@ export const getOrderBook = () => {
 export const postOrderBook = () => {
   return jQuery.ajax({
     method: 'POST',
-    url: '/',
+    url: '/postOrder',
     success: (data) => {
       console.log("data in POST :", data);
       return data;
