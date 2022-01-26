@@ -1,0 +1,2 @@
+Buy	99.5	100	trader1	TW	Open	0
+Sell	99.6	200	trader2	TW	Open	0

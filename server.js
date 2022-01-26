@@ -11,8 +11,9 @@ const processOrder = require("./processOrder.js");
 const preProcessOrder = require("./preProcessOrder.js");
 
 app.get('/api', (req, res) => {
-  //const stream = fs.createReadStream('./data/TW/order_1.txt');
-  const stream = fs.createReadStream('./data/TW/order_2.txt');
+  const stream = fs.createReadStream('./data/TW/order_1.txt');
+  //const stream = fs.createReadStream('./data/TW/order_2.txt');
+  //const stream = fs.createReadStream('./data/test2.txt');
 
   const splitLines = new Transform({
     readableObjectMode: true,
@@ -29,13 +30,9 @@ app.get('/api', (req, res) => {
       let parsed = orders.map((order) => {
         console.log("order : ", order);
 
-        let t = order.split('\t');
-
-        t[1] = parseInt(t[1]);
-        t[2] = parseInt(t[2]);
-        t[6] = parseInt(t[6]);
-
-        let clob = processOrder.processOrder(t);
+        let preProcessing = preProcessOrder.preProcessOrder(order); 
+       
+        let clob = processOrder.processOrder(preProcessing);
         console.log("clob.bidItems : ",clob.bids);
         console.log("clob.offerItems : ",clob.offers);
         console.log("clob.Trade : ",clob.trade);
