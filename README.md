@@ -43,15 +43,27 @@ You can choose to process any trade file but changing the file in server.js
 You can make POST request and add additional orders : A file watcher is implemented which triggers as soon as the POST
 API appends data to the text file. 
 
+
 ![image](https://user-images.githubusercontent.com/16959405/151090135-1a856506-47c3-4b1d-b8b3-0c5851da3542.png)
+
 
 Flow of the project :
 
+
 ![image](https://user-images.githubusercontent.com/16959405/151090791-a94444a2-8edf-403b-9a1e-bda8b5eb0869.png)
+
 
 Sample Console Output :
 
+
 ![image](https://user-images.githubusercontent.com/16959405/151224014-2c22c782-4d20-4ae8-8a8e-bd2d41a1b5c1.png)
+
+
+Sample Test Cases Executed :
+
+
+![image](https://user-images.githubusercontent.com/16959405/151224329-e5fd1065-8b62-4927-b453-8ab303796464.png)
+
 
 
 
