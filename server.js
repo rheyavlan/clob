@@ -13,7 +13,6 @@ const preProcessOrder = require("./preProcessOrder.js");
 app.get('/api', (req, res) => {
   //const stream = fs.createReadStream('./data/TW/order_1.txt');
   const stream = fs.createReadStream('./data/TW/order_2.txt');
-  //const stream = fs.createReadStream('./data/TW/order_form.json');
 
   const splitLines = new Transform({
     readableObjectMode: true,
@@ -37,17 +36,13 @@ app.get('/api', (req, res) => {
         t[6] = parseInt(t[6]);
 
         let clob = processOrder.processOrder(t);
-        //let clob = processOrder.processingOrder(t);
         console.log("clob.bidItems : ",clob.bids);
         console.log("clob.offerItems : ",clob.offers);
         console.log("clob.Trade : ",clob.trade);
-        //return t;
         return clob;
       });
-      //console.log("parsed : ", parsed);
-      //console.log("orders : ", orders);
+      
       this.push(JSON.stringify(parsed) + '\n');
-      //this.push(JSON.stringify(processOrder.sendAllOrder) + '\n');
       cb();
     }
   });
@@ -72,17 +67,15 @@ app.post('/postOrder', urlencodedParser,(req, res) => {
 
   res.status(200).json(order);
   
-
-  //const obj = JSON.parse(order);
   let data = '\n'+order.type+'\t'+order.price+'\t'+order.quantity+'\t'+order.user+'\t'+'TW'+'\t'+'Open'+'\t'+0+'\n';
   fs.appendFile('./data/TW/order_2.txt', data, (err) => { //JSON.stringify(order)
       
-    // In case of a error throw err.
     if (err) throw err;
 
+    /**Filewatcher watches for any changes in the file and triggers processOrder for that particular order */
     fs.watch("./data/TW/order_2.txt", (eventType, filename) => {
-      console.log("\nThe file", filename, "was modified!");
-      console.log("The type of change was:", eventType);
+      //console.log("\nThe file", filename, "was modified!");
+      //console.log("The type of change was:", eventType);
       let parsedData = preProcessOrder.preProcessOrder(data);
       console.log("parsedOrder in server.js", parsedData);
       processOrder.processOrder(parsedData);
@@ -90,9 +83,6 @@ app.post('/postOrder', urlencodedParser,(req, res) => {
     });  
   })
 
-
 })
 
-
 app.listen(port, () => console.log(`Listening on port ${port}...`));
-
