@@ -49,6 +49,11 @@ Flow of the project :
 
 ![image](https://user-images.githubusercontent.com/16959405/151090791-a94444a2-8edf-403b-9a1e-bda8b5eb0869.png)
 
+Sample Console Output :
+
+![image](https://user-images.githubusercontent.com/16959405/151224014-2c22c782-4d20-4ae8-8a8e-bd2d41a1b5c1.png)
+
+
 
 **Technologies and Tools used:**
 
