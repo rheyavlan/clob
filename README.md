@@ -24,12 +24,16 @@ Command to test app :
 
 You will be redirected to http://localhost:3000/
 
-Click on **Process Trade** to process all the tradespresent in order.txt file in the data directory
+Click on **Process Trade** to process all the trades present in order.txt file in the data directory 
+
+You can choose to process any trade file but changing the file in server.js
+
 
 ![image](https://user-images.githubusercontent.com/16959405/151089689-1deb70be-a537-46d4-963c-2e8ca0dc5561.png)
 
 
-You can make POST request and add additional orders :
+You can make POST request and add additional orders : A file watcher is implemented which triggers as soon as the POST
+API appends data to the text file. 
 
 ![image](https://user-images.githubusercontent.com/16959405/151090135-1a856506-47c3-4b1d-b8b3-0c5851da3542.png)
 
