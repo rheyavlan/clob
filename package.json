@@ -6,13 +6,18 @@
   "scripts": {
     "client": "cd client && npm run start",
     "server": "nodemon server.js",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "test": "mocha ./test/* --recursive --reporter mocha-junit-reporter --reporter-options outputs=true --timeout 60000 --exit"
   },
   "dependencies": {
     "body-parser": "^1.19.1",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "clone": "^2.1.1",
     "express": "^4.16.2",
     "js-priority-queue": "^0.1.5",
+    "mocha": "^6.2.2",
+    "mocha-junit-reporter": "1.18.0",
     "react-scripts": "3.0.1"
   },
   "devDependencies": {

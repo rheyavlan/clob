@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.041" tests="2" failures="0" skipped="1">
+  <testsuite name="Root Suite" timestamp="2022-01-26T01:30:19" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Task APIs" timestamp="2022-01-26T01:30:19" tests="0" file="/Users/rheyavithlani/Desktop/clob/test/serverTest.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Test GET route /api" timestamp="2022-01-26T01:30:19" tests="1" file="/Users/rheyavithlani/Desktop/clob/test/serverTest.js" failures="0" time="0.041">
+    <testcase name="Task APIs Test GET route /api It should return all orders" time="0.041" classname="It should return all orders">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test POST route" timestamp="2022-01-26T01:30:19" tests="1" file="/Users/rheyavithlani/Desktop/clob/test/serverTest.js" failures="0" time="0">
+  </testsuite>
+</testsuites>

@@ -19,6 +19,7 @@ export const postOrderBook = () => {
     method: 'POST',
     url: '/',
     success: (data) => {
+      console.log("data in POST :", data);
       return data;
     },
     error: (err) => {
