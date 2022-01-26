@@ -13,7 +13,7 @@ Install dependencies
 npm install
 ```
 
-Command for server : 
+Command for server (Run this command if you only want to run the server): 
 > node server.js
 
 Command to run app : 
@@ -28,8 +28,6 @@ Click on **Process Trade** to process all the tradespresent in order.txt file in
 
 ![image](https://user-images.githubusercontent.com/16959405/151089689-1deb70be-a537-46d4-963c-2e8ca0dc5561.png)
 
-
-You will be redirected to http://localhost:3000/
 
 You can make POST request and add additional orders :
 
